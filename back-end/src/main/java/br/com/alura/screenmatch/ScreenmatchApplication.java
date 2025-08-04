@@ -11,19 +11,10 @@ import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
-public class ScreenmatchApplication implements CommandLineRunner {
+public class ScreenmatchApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ScreenmatchApplication.class, args);
     }
 
-    @Autowired
-    private SerieRepository repositorio;
-
-    @Override
-    public void run(String... args) throws Exception {
-        System.out.println("\nPrimeiro projeto spring sem web\n");
-        Principal principal = new Principal(repositorio);
-        principal.exibeMenu();
-    }
 }
